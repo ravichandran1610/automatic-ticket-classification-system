@@ -1,7 +1,8 @@
 from ticketClassifier.constants import *
 from ticketClassifier.utils.common import read_yaml, create_directories
 from ticketClassifier.entity import (
-    DataIngestionConfig
+    DataIngestionConfig,
+    DataLoadConfig
 )
 
 
@@ -28,5 +29,13 @@ class ConfigurationManager:
         )
         return data_ingestion_config
     
-
-        
+    def get_data_load_config(self) -> DataLoadConfig:
+        config = self.config.data_load
+        create_directories([config.root_dir])
+        data_load_config = DataLoadConfig(
+            root_dir=config.root_dir,
+            raw_data_path=config.raw_data_path,
+            df_data_path=config.df_data_path
+            )
+        return data_load_config
+    

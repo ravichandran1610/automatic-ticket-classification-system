@@ -1,5 +1,8 @@
 PyYAML
 python-box
 ensure
+gdown
+pandas
+textblob
 
 -e .

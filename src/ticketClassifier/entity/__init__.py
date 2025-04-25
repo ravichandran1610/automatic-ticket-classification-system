@@ -7,4 +7,10 @@ class DataIngestionConfig:
     source_URL: Path
     local_data_file: Path
 
+@dataclass(frozen=True)
+class DataLoadConfig:
+    root_dir: Path
+    raw_data_path: Path
+    df_data_path: Path
+
 

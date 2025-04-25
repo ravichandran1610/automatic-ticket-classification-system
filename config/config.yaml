@@ -2,6 +2,11 @@ artifacts_root: artifacts
 
 data_ingestion:
   root_dir: artifacts/data_ingestion
-  source_URL: https://drive.google.com/file/d/1qTVu7y8QTtN2_XNOK1NnGVqteEfXMA-m/view?pli=1
-  local_data_file: artifacts/data_ingestion/complaints-2021-05-14_08_16.json
+  source_URL: https://drive.google.com/uc?id=1qTVu7y8QTtN2_XNOK1NnGVqteEfXMA-m
+  local_data_file: artifacts/data_ingestion/complaints.json
+
+data_load:
+  root_dir: artifacts/data_load
+  raw_data_path: artifacts/data_ingestion/complaints.json
+  df_data_path: artifacts/data_load/complaints_df.pkl
 
